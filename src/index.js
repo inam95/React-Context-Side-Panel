@@ -3,10 +3,13 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import ContextPanelProvider from './context/ContentPanelContext';
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <ContextPanelProvider>
+      <App />
+    </ContextPanelProvider>
   </React.StrictMode>,
   document.getElementById('root')
 );

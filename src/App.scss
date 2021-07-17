@@ -36,3 +36,40 @@
     transform: rotate(360deg);
   }
 }
+
+.app-overlay {
+  position: fixed;
+  right: 0;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  opacity: 0.5;
+  display: block;
+  z-index: 999;
+
+  &.disabled {
+    display: none;
+  }
+}
+
+.side-panel-container {
+  height: 100vh;
+  width: 400px;
+  height: 100%;
+  max-height: 100%;
+  position: fixed;
+  top: 0;
+  right: -400px;
+  z-index: 1001;
+  /* transition: right 0.3s ease, width 0.3s ease; */
+  background-color: red;
+
+  &.toggle {
+    right: 0;
+  }
+}
+
+button {
+  cursor: pointer;
+}
